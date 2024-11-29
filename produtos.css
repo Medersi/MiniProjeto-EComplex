@@ -1,0 +1,165 @@
+/* Seção do produto */
+.product-detail {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Imagem do produto */
+.product-image {
+    width: 800px;
+    height: 400px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Informações do produto */
+.product-info {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    gap: 15px;
+}
+
+/* Botão "Adicionar ao Carrinho" */
+.add-to-cart {
+    background-color: #3ca564e1; /* Cor verde */
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #3ca564a3; /* Verde mais escuro ao passar o mouse */
+}
+
+/* Botões de cores - círculos */
+.color-selection button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Forma circular */
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color-selection button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-selection .color1 {
+    background-color: #5c13ca; /* roxo */
+}
+
+.color-selection .color2 {
+    background-color: #d63764; /* Vermelho */
+}
+
+.color-selection .color3 {
+    background-color: #d3d606; /* Amarelo */
+}
+
+.color-selection .color4 {
+    background-color: #ffffff; /* Branco */
+}
+
+.color-selection .color5 {
+    background-color: #000000; /* Preto */
+}
+
+/* Seção de quantidade */
+.quantity {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.quantity label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.quantity input {
+    padding: 8px;
+    font-size: 16px;
+    width: 100px; /* Largura do campo de quantidade */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Seção de imagens adicionais */
+.additional-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.additional-images img {
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(100, 240, 165, 0.851);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.additional-images img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal CSS */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
+}
+
+.modal:target {
+    display: flex;
+}
+
+.modal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porta Chaves Skins - Ecomplex</title>
+    <link rel="stylesheet" href="loja.css"> <!-- Mantém a loja original -->
+    <link rel="stylesheet" href="produtos.css"> <!-- Novo arquivo CSS específico para os produtos -->
+</head>
+<body class="product-page">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="ecomplex.html">Página inicial</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="updates.html">Atualizações</a></li>
+                <li><a href="loja.html">Loja</a></li>
+            
+            </ul>
+        </nav>
+    </header>
+    
+
+    <main>
+        <!-- Seção do produto -->
+        <div class="product-detail">
+            <div class="product-image">
+                <img src="merch/TshirtGirl3.jpg" alt="T-shirt front">
+            </div>
+            <div class="product-info">
+                <h1>T-shirt front</h1>
+                <p>SKU: 15</p>
+                <p>Preço: 25,00 €</p>
+                <p>Descrição do produto: Este é um porta-chaves feito com materiais de alta qualidade. Ideal para personalizar suas chaves e adicionar um toque único ao seu dia a dia.</p>
+               
+                <div class="quantity-selection">
+                    <label for="quantity">Quantidade: </label>
+                    <input type="number" id="quantity" value="1" min="1" max="10">
+                </div>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+    <!-- Seção de imagens adicionais -->
+    <div class="additional-images">
+        <a href="#image1">
+            <img src="merch/PurpleKeyChain_1.png" alt="Vista lateral do Porta Chaves">
+        </a>
+        <a href="#image2">
+            <img src="merch/RedKeyChain_1.png" alt="Detalhes do Porta Chaves">
+        </a>
+        <a href="#image3">
+            <img src="merch/YellowKeyChain_1.png" alt="Porta Chaves em uso">
+        </a>
+    </div>
+
+    <!-- Modais CSS -->
+    <div class="modal" id="image1">
+        <a href="#" class="close">×</a>
+        <img src="merch/PurpleKeyChain_1.png" alt="Vista lateral do Porta Chaves">
+    </div>
+    <div class="modal" id="image2">
+        <a href="#" class="close">×</a>
+        <img src="merch/RedKeyChain_1.png" alt="Detalhes do Porta Chaves">
+    </div>
+    <div class="modal" id="image3">
+        <a href="#" class="close">×</a>
+        <img src="merch/YellowKeyChain_1.png" alt="Porta Chaves em uso">
+    </div>
+</main>
+
+<footer>
+    <p>© 2024 Página Ecomplex. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>
