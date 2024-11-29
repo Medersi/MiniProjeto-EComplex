@@ -10,25 +10,8 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: white; /* Texto branco para maior contraste */
-    overflow: hidden; /* Remove barras de rolagem */
-}
-
-/* Configurando o vídeo como plano de fundo */
-.video-background {
-    position: fixed; /* Fixa o vídeo ao fundo da página */
-    top: 0; /* Alinha ao topo */
-    left: 0;
-    width: 100%; /* Ocupa toda a largura */
-    height: 100%; /* Ocupa toda a altura */
-    z-index: -1; /* Envia o vídeo para o fundo */
-    overflow: hidden;
-}
-
-.video-background video {
-    width: 100%; /* Preenche a largura */
-    height: 100%; /* Preenche a altura */
-    object-fit: cover; /* Cobre o espaço sem distorção */
+    color: white;
+    overflow-x: hidden; /* Impede rolagem horizontal */
 }
 
 /* Cabeçalho */
@@ -70,75 +53,107 @@ header nav ul li a:hover {
     background-color: rgb(240, 240, 240);
 }
 
-/* Conteúdo principal */
-main {
-    padding: 120px 20px; /* Evita sobreposição com o cabeçalho */
+/* Primeira seção com vídeo de fundo */
+.video-section {
+    position: relative;
+    min-height: 100vh; /* Ocupa toda a altura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    z-index: 1;
 }
 
-/* Estilização para a box horizontal */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .horizontal-box {
-    display: flex; /* Layout em linha */
-    justify-content: flex-start; /* Alinha os elementos ao início (esquerda) */
-    align-items: center; /* Centraliza verticalmente */
-    gap: 20px; /* Espaço entre os elementos */
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
-    color: black; /* Texto preto */
-    border-radius: 12px; /* Bordas arredondadas */
-    padding: 20px; /* Espaço interno */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra */
-    position: absolute; /* Posicionamento absoluto */
-    left: 20px; /* Distância da borda esquerda */
-    bottom: 20px; /* Distância da borda inferior */
-    max-width: 600px; /* Largura máxima */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end; /* Alinha o texto dentro da box à esquerda */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 600px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    position: absolute; /* Permite posicionamento controlado */
+    left: 20px; /* Afasta a box 20px do lado direito da tela */
+    top: 90%; /* Move para 60% da altura da tela */
+    transform: translateY(-50%); /* Centraliza verticalmente em relação ao ponto de referência */
 }
 
-/* Estilização para o conteúdo dentro da box */
-.horizontal-box .box-content {
-    flex: 1; /* Expande para ocupar espaço restante */
-}
 
 .horizontal-box h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #0056b3; /* Azul */
+    color: #3ca564a3; /* Verde */
 }
 
 .horizontal-box h3 {
     font-size: 20px;
     margin-bottom: 10px;
-    color: #333; /* Cinza escuro */
+    color: #333;
 }
 
 .horizontal-box p {
     font-size: 16px;
     line-height: 1.5;
-    margin: 0;
 }
 
-/* Estilização para a imagem */
-.horizontal-box .box-image {
-    flex-shrink: 0; /* Não encolhe */
+/* Seção seguinte com fundo branco */
+.content-section {
+    background-color: white;
+    color: black;
+    padding: 80px 40px;
+    text-align: center;
 }
 
-.horizontal-box .box-image img {
-    width: 100px; /* Largura da imagem */
-    height: auto; /* Preserva proporção */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+.content-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3ca564a3; /* Verde */
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.images-container img {
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.images-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Rodapé */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(226, 225, 225, 0.9); /* Fundo semi-transparente */
     text-align: center;
-    padding: 5px;
-    z-index: 1;
+    padding: 10px;
+    background-color: rgba(226, 225, 225, 0.9);
     color: black;
 }
+
 

@@ -7,12 +7,8 @@
     <link rel="stylesheet" href="sobre.css">
 </head>
 <body>
-    <div class="video-background">
-        <video autoplay loop muted playsinline>
-            <source src="Explosao Ecomplex.mp4" type="video/mp4">
-            Seu navegador não suporta a reprodução de vídeo.
-        </video>
-    </div>
+
+    <!-- Cabeçalho -->
     <header>
         <nav>
             <ul>
@@ -20,12 +16,18 @@
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="updates.html">Atualizações</a></li>
                 <li><a href="loja.html">Loja</a></li>
-
             </ul>
         </nav>
     </header>
-    
-    <main>
+
+    <!-- Primeira seção com vídeo de fundo -->
+    <section class="video-section">
+        <div class="video-background">
+            <video autoplay loop muted playsinline>
+                <source src="Explosao Ecomplex.mp4" type="video/mp4">
+                Seu navegador não suporta a reprodução de vídeo.
+            </video>
+        </div>
         <div class="horizontal-box">
             <div class="box-content">
                 <h2>E-complex</h2>
@@ -35,9 +37,21 @@
                 </p>
             </div>
         </div>
-    </main>    
+    </section>
+
+    <!-- Seção seguinte com fundo branco -->
+    <section class="content-section">
+        <h2>Screenshots</h2>
+        <div class="images-container">
+            <img src="inicio.png" alt="Screenshot 1">
+            <img src="Inventario.png" alt="Screenshot 2">
+        </div>
+    </section>
+
+    <!-- Rodapé -->
     <footer>
         <p>© 2024 Página Ecomplex. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
+
